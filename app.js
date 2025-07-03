@@ -11,9 +11,6 @@ function onLoginSubmit(event){
   loginForm.classList.add(HIDDEN_CLASSNAME); // form 숨기기
   const username = loginInput.value; // input의 value를 가져옴
   localStorage.setItem(USERNAME_KEY, username); 
-  // 로컬스토리지에 username 저장
-  // console.log(loginInput.value);
-  // console.log(username);
   paintGreetings(username);
 }
 
@@ -32,6 +29,3 @@ if (savedUsername === null) {
   // show the greeting
   paintGreetings(savedUsername);
 }
-
-// loginForm.addEventListener("submit", onLoginSubmit);
-// link.addEventListener("click", handleLinkClick);
