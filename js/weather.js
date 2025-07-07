@@ -8,10 +8,8 @@ function onGeoWorked (position){
   fetch(url).then(response => response.json()).then(data => {
     const weather = document.querySelector('#weather span:first-child');
     const city = document.querySelector('#weather span:last-child');
-
     weather.innerText =  `현재 날씨: ${data.weather[0].main} / 현재 기온: ${data.main.temp}`;
     city.innerText = data.name;
-    
   });
 }
 
